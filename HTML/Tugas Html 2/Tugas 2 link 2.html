@@ -150,33 +150,81 @@
         </tr>
     </table>
 
-    <!-- Berikut ini adalah element tabel yang menggunakan elemen desain tabel -->
-    <table>
+    <br>
+
+    <!-- Berikut ini adalah element tabel yang menggunakan elemen desain tabel yaitu merge -->
+    <table border="1" align="center" cellspacing="0" cellpadding="10">
         <!-- Bagian ini adalah Header -->
         <tr>
             <th width="50">No</th>
             <!-- Kolom nama dan kekuatan digabung -->
-            <th width="400" colspan="2">Nama dan Special techniques</th>
+            <th width="350" colspan="3">Nama dan Special techniques</th>
         </tr>
 
         <!-- Bagian ini adalah baris pertama -->
         <tr>
-            <td rowspan="3">1</td>
+            <td rowspan="3" align="center">1</td>
             <td>Yuji Itadori</td>
             <td>Summon Sukuna</td>
         </tr>
 
+        <!-- bagian ini adalah baris kedua -->
         <tr>
             <td>Megumi Fushiguro</td>
             <td>Mahoraga</td>
         </tr>
 
+        <!-- Bagian ini adalah -->
         <tr>
             <td>Nobara Kugisaki</td>
             <td>Santet paku</td>
         </tr>
-
     </table>
+
+    <br>
+
+    <h4>Ayo daftarkan dirimu sekarang untuk menjadi bagian dari sekolah Jujutsu dengan mengisi form di bawah ini!!!</h4>
+    <!-- Bagian ini merupakan template desain form  -->
+    <h3>Formulir Pendaftaran</h3>
+    <form action="" method="post">
+    <table border="0">
+        <tr>
+            <td>NIK</td>
+            <td><input type="text" /></td>
+        </tr>
+
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" /></td>
+        </tr>
+
+        <tr>
+            <td>Jenis Kelamin</td>
+            <td>
+                <input type="radio" />pria
+                <input type="radio" />Wanita
+            </td>
+        </tr>
+
+        <tr>
+            <td>Pekerjaan</td>
+            <td>
+                <select name="Job">
+                    <option>Guru</option>
+                    <option>Wiraswasta</option>
+                    <option>Lainnya</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="submit" value="ok">
+                <input type="submit" value="cancel">
+            </td>
+        </tr>
+    </table>
+    </form>
 
 
 </body>

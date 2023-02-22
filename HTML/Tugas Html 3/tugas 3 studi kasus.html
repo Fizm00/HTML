@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Studi Kasus: Validasi Input HTML5</h1>
+    <form action="">
+        <table border="0">
+            <tr>
+                <td>Nama</td>
+                <td>:<input type="text" pattern="[A-Za-z ]+" title="Hanya huruf dan spasi yang diperbolehkan" placeholder="isikan nama anda" size="31" required/></td>
+            </tr>
+
+            <tr>
+                <td>Usia</td>
+                <td>:<input type="text" size="1" required/>(usia min 17-30)</td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td>:<input type="email" name="email" placeholder="nama_email@host.com" size="31" required/></td>
+            </tr>
+
+            <tr>
+                <td>Web</td>
+                <td>:<input placeholder="http://" size="31" required/></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td>:<input type="text" maxlength="8" placeholder="Semua karakter, min 8" size="17" required/></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>&nbsp;<input type="Submit"></td>></td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>

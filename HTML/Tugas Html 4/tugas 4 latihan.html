@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 4 Latihan</title>
+    <style type="text/css">
+    /* 
+    jika kode berikut diimplementasikan maka pendefeinisian style akan berdampak pada seluruh elemen paragraf
+    p {
+        color: purple;
+        font-style: italic;
+    }
+    maka solusi untuk mengatasi masalah tersebut adalah dengan 
+    kita bisa menggunakan atribut class atau id agar dapat
+    menspesifikasikan pemberian style. caranya sebagai berikut:
+    */
+    .style1 {
+        color: purple;
+        font-style: italic;
+    }
+
+    #style2 {
+        color: purple;
+        font-weight: bold;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+    <!-- berikut ini merupakan latihan 1 yaitu menggunakan style sheet dengan menerapkan inline -->
+    <p style="color:purple; font-style: italic">
+    ini baris pertama
+
+    <p style="color:purple; font-weight: bold">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    <!-------------------------------------------------------------------------------------------->
+    
+    <hr color="Black">
+    
+    <!-- berikut ini merupakan latihan 1 yaitu menggunakan style sheet dengan menerapkan embedded -->
+    <p class="style1">
+    Ini paragraf pertama
+
+    <p id="style2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+    nisi ut aliquip ex ea commodo consequat.
+
+    <p class="style1">
+    Ini paragraf ketiga
+    <!---------------------------------------------------------------------------------------------->
+    
+    <hr color="Black">
+
+    <!-- berikut ini merupakan latihan 1 yaitu menggunakan style sheet dengan menerapkan Linked -->
+    <p class="gaya1"> 
+    Ini paragraf pertama
+
+    <p id="gaya2">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+
+    <p class="gaya1"> 
+    Ini paragraf ketiga
+    <!-------------------------------------------------------------------------------------------->
+
+    <hr color="Black">
+
+    <!-- berikut ini merupakan latihan 2 yaitu menggunakan Tipografi dengan menerapkan style font-->
+    <p class="style_font">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    <!--------------------------------------------------------------------------------------------->
+
+    <hr color="Black">
+
+    <!-- berikut ini merupakan latihan 2 yaitu menggunakan tipografi dengan menerapkan atur spasi -->
+    <p class="style_font2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    <!---------------------------------------------------------------------------------------------->
+
+    <hr color="Black">
+
+    <!-- berikut ini merupakan latihan 3 yaitu menggunakan Elemen-Elemen Halaman dengan menerapkan border -->
+    <p class="border1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    
+    <p class="border2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+
+    <p class="border3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    <!------------------------------------------------------------------------------------------------------->
+
+    <hr color="black">
+
+    <!-- berikut ini merupakan latihan 3 yaitu menggunakan Elemen-Elemen Halaman dengan menerapkan padding -->
+    <p class="borderpadding1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    
+    <p class="borderpadding2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    <!------------------------------------------------------------------------------------------------------->
+
+    <hr color="black">
+
+    <!-- berikut ini merupakan latihan 4 yaitu menggunakan List -->
+    List Normal
+    <ul>
+        <li>Satu</li>
+        <li>Dua</li>
+    </ul>
+    <hr/>
+    Style List
+    <div id="leftmenu">
+        <ul>
+            <li><a href="#">Menu Satu</a></li>
+            <li><a href="#">Menu dua</a></li>
+            <li><a href="#">Menu tiga</a></li>
+        </ul>
+    </div>
+    <!------------------------------------------------------------>
+
+    <hr color="black">
+
+    <!-- berikut ini merupakan latihan 5 yaitu menggunakan division dengan menerapkan ukuran area -->
+    <div class="box1">
+        paragraf ini di dalam tag &lt;div&gt;
+    </div>
+
+    <div class="box2">
+        lorem  ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <!----------------------------------------------------------------------------------------------->
+
+    <hr color="black">
+
+    <!-- berikut ini merupakan latihan 5 yaitu menggunakan division dengan menerapkan posisi area -->
+    <div class="posisiarea1">
+        Paragraf ini di dalam tag &lt;div&gt;
+    </div>
+
+    <div class="posisiarea2">
+        lorem  ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+        nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <!---------------------------------------------------------------------------------------------->
+   
+    </body>
+</html>

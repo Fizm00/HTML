@@ -1,0 +1,125 @@
+.gaya1 { 
+    color: red;
+    font-style: italic;
+}
+#gaya2 { 
+    color: blue;
+    font-weight: bold;
+}
+
+.style_font {
+    font-family: Georgia;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+    color:blueviolet;
+}
+
+.style_font2 {
+    line-height: 36px;
+}
+
+.border1 {
+    border: 2px solid purple;
+}
+
+.border2 {
+    border: 2px dashed purple;
+}
+
+.border3 {
+    border: 2px dotted purple;
+}
+
+.borderpadding1 {
+    border: 2px solid purple;
+    padding: 10px;
+}
+
+.borderpadding2 {
+    border: 2px dashed purple;
+    padding: 20px 10px 5px 40px;
+}
+
+#leftmenu ul {
+    width: 200px;
+    list-style-type: none;
+    padding: 0; margin: 0;
+}
+
+#leftmenu a:link, #leftmenu a:visited, #leftmenu a:active {
+    padding-left: 15px;
+    text-decoration: none;
+}
+
+#leftmenu a {
+    padding: 5px 0px 5px 15px; display: block;
+    background: #A084DC no-repeat left center;
+    margin: 0px 0px 1px; color: white;
+}
+
+#leftmenu a:hover {
+    background: #8B7CC7 no-repeat left center;
+    color: white;
+}
+
+.box1 {
+    width: 200px;
+    height: 50px;
+    background-color: #A084DC;
+    border: 2px solid black;
+}
+
+.box2 {
+    margin: 10px;
+    padding: 10px;
+    width: 400px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.posisiarea1 {
+    float: left;
+    width: 200px;
+    height: 50px;
+    background-color: #A084DC;
+    border: 2px solid black;
+}
+
+.posisiarea2 {
+    float: right;
+    padding: 10;
+    width: 350px;
+    height: 100px;
+    border: 2px solid black;
+}
+
+/* Studi Kasus */
+.lingkaran { 
+    background-color: bisque;
+    border: 2px solid #897048;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+.bordermengkelung {
+    border: 5px solid #5e9711;
+    padding: 10px;
+    width: 300px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.bordershadow {
+    border: 2px solid #888;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 10px 10px 5px #888;
+}

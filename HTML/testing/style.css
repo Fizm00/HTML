@@ -1,0 +1,8 @@
+.border-background {
+    border: 2px solid black;
+    padding: 10px; 
+    background-image: url('e6a757608c74c2527bbb8cc7c75622c7.jpg'); 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-size: cover;
+  }

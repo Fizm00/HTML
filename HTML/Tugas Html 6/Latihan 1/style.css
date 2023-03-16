@@ -1,0 +1,14 @@
+/* Pengaturan default display none */
+.smartphone { 
+    display: none;
+}
+
+/* Media query untuk smartphone 375px */
+@media only screen and (max-width: 375px) { 
+    body {
+        background-color: #66347F;
+        }
+    .smartphone { 
+        display: block;
+        }
+    }

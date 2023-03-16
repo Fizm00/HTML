@@ -1,0 +1,52 @@
+#wrapper {
+    margin: auto; 
+    width: 100%;
+    }
+    #header { 
+        height: 150px; 
+        padding: 20px;
+        border: 2px solid #66347F;
+    }
+    #nav {
+        margin: auto; 
+        padding: 20px; 
+        height: 200px;
+        border: 2px solid #66347F;
+    }
+    .box {
+        float: left; 
+        width: 22%;
+        margin: 0 2% 0 0; 
+        height: 120px; 
+        background: #66347F; 
+        border: 2px solid #66347F;
+        color: white;
+        text-align: center;
+    }
+    #footer { 
+        padding: 20px; 
+        height: 120px;
+        border: 2px solid #66347F;
+    }
+    /** Responsif tablet **/
+    @media only screen and (max-width: 768px) { 
+        #nav {
+        height: 360px;
+        }
+        /** atur box 2 kolom **/
+        .box {
+            width: 45%;
+            margin: 0 4% 20px 0;
+        }
+    }
+    /** Responsif smartphone **/
+    @media only screen and (max-width: 375px) { 
+        #nav {
+            height: 640px;
+        }
+        /** atur box 1 kolom **/
+        .box {
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+    }

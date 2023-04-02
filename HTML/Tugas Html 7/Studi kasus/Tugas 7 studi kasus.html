@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        .navbar {
+            height: 60px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+            opacity: 0.9;
+        }
+
+        .nav-item {
+            padding: 20px;
+        }
+
+        .bg-warning {
+            position: absolute;
+            top: 10;
+            right: 0;
+            padding: 18px;
+            padding-left: 40px;
+        }
+
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .bg1 {
+            background-image: url('background1.jpg');
+            background-size: cover;
+            height: 100vh;
+            justify-content: flex-end;
+            flex-direction: column;
+            display: flex;
+            margin-top: -20px;
+            cursor: pointer;
+        }
+
+        .bg2 {
+            background-image: url('background2.jpg');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .bg-karakter {
+            background-color: #d9e4f0;
+            color: #003b6f;
+            font-size: 24px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .bg-senjata {
+            background-color: #a5b3cc;
+            color: #003b6f;
+            font-size: 24px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .bg-fitur {
+            background-color: #6d84a3;
+            color: #fff;
+            font-size: 24px;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media screen and (max-width: 1920px) {
+            .kota1 {
+                background-image: url('backgroundkota1.jpg');
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                font-size: 36px;
+                color: #fff;
+                line-height: 260px;
+                width: 100%;
+                background-size: 1920px 260px;
+                height: 260px;
+                cursor: pointer;
+                transition: transform 0.4s 0s ease;
+
+            }
+
+            .kota2 {
+                background-image: url('backgroundkota2.jpg');
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                font-size: 36px;
+                color: #fff;
+                line-height: 260px;
+                width: 100%;
+                background-size: 1920px 260px;
+                height: 260px;
+                cursor: pointer;
+                transition: transform 0.4s 0s ease;
+            }
+
+            .kota3 {
+                background-image: url('backgroundkota3.jpg');
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                font-size: 36px;
+                color: #fff;
+                line-height: 260px;
+                width: 100%;
+                background-size: 1920px 260px;
+                height: 260px;
+                cursor: pointer;
+                transition: transform 0.4s 0s ease;
+            }
+
+            .kota4 {
+                background-image: url('backgroundkota4.jpg');
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                font-size: 36px;
+                color: #fff;
+                line-height: 260px;
+                width: 100%;
+                background-size: 1920px 260px;
+                height: 260px;
+                cursor: pointer;
+                transition: transform 0.4s 0s ease;
+            }
+
+            .kota5 {
+                background-image: url('backgroundkota5.jpg');
+                display: inline-block;
+                position: relative;
+                z-index: 3;
+                font-size: 36px;
+                color: #fff;
+                line-height: 260px;
+                width: 100%;
+                background-size: 1920px 260px;
+                height: 260px;
+                word-spacing: 1px;
+            }
+        }
+
+        .textdownload {
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(114, 71, 21, 0.68), 0 0 10px rgba(114, 71, 21, 0.68);
+        }
+
+        .karakter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .kota1:hover {
+            transform: scale(1.2);
+        }
+
+        .kota2:hover {
+            transform: scale(1.2);
+        }
+
+        .kota3:hover {
+            transform: scale(1.2);
+        }
+
+        .kota4:hover {
+            transform: scale(1.2);
+        }
+
+        footer {
+            width: 100%;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="LogoGenshin.png" alt="Genshin Impact"
+                style="margin-left: 50px; height: 50px; float: left; margin-left: 0px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Karakter</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Senjata</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Fitur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Kontak</a>
+                </li>
+            </ul>
+            <div class="bg-warning" onclick="alert('Tombol download ditekan!')" style="cursor: pointer">Download</div>
+        </div>
+    </nav>
+    <div class="bg1">
+        <div class="container mt-5" style="transform: translateY(-100%);">
+            <p class="textdownload"><strong>Released on Multiple Platforms - Download Now!</strong></p>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <a href="https://www.playstation.com/en-us/games/genshin-impact-ps4/" target="_blank">
+                        <img src="caf1de876b2d79715604463df4187b2f_4939885485338929477.png" class="img-fluid"
+                            alt="Playstation 4">
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://apps.apple.com/us/app/genshin-impact/id1517783697" target="_blank">
+                        <img src="6ff53bc5d797e9efc2ac7b2b602c267a_8295237617862628623.png" class="img-fluid"
+                            alt="App Store">
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://play.google.com/store/apps/details?id=com.miHoYo.GenshinImpact&hl=en_US&gl=US"
+                        target="_blank">
+                        <img src="396b8eb0d0d2f27aadb476e0b62d0926_8878641138830187947.png" class="img-fluid"
+                            alt="Play Store">
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a href="https://www.microsoft.com/en-us/p/genshin-impact/9nwdklbxz0lk" target="_blank">
+                        <img src="a27edf5aa048e9509f0850856ad3f403_396608336029707725.png" class="img-fluid"
+                            alt="Windows">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg2">
+        <div class="container content">
+            <div class="row">
+                <div class="col-sm-4 bg-karakter">
+                    <h2>Karakter</h2>
+                    <p>Temukan karakter-karakter baru di Genshin Impact, dengan kemampuan dan keunikan masing-masing.
+                    </p>
+                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
+                </div>
+                <div class="col-sm-4 bg-senjata">
+                    <h2>Senjata</h2>
+                    <p>Dapatkan senjata-senjata terbaik untuk karakter Anda, dengan berbagai jenis dan kekuatan.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
+                </div>
+                <div class="col-sm-4 bg-fitur">
+                    <h2>Fitur</h2>
+                    <p>Dapatkan fitur-fitur menarik dan seru di Genshin Impact, seperti petualangan, pertarungan, dan
+                        banyak lagi.</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="kota1">
+        <img src="Jean.png" alt="Gambar Karakter" class="karakter" style="margin-left: 290px;">
+        <p style="text-align: center; font-family: Helvetica;">Mondstats</p>
+        <script>
+            $(document).ready(function () {
+                $(".kota1").hover(
+                    function () {
+                        $(this).find(".karakter").css("opacity", "1");
+                    },
+                    function () {
+                        $(this).find(".karakter").css("opacity", "0");
+                    }
+                );
+            });
+        </script>
+    </div>
+    <div class="kota2">
+        <img src="Xiao.png" alt="Gambar Karakter" class="karakter" style="margin-left: 250px;">
+        <p style="text-align: center; font-family: Helvetica;">Liyue</p>
+        <script>
+            $(document).ready(function () {
+                $(".kota2").hover(
+                    function () {
+                        $(this).find(".karakter").css("opacity", "1");
+                    },
+                    function () {
+                        $(this).find(".karakter").css("opacity", "0");
+                    }
+                );
+            });
+        </script>
+    </div>
+    <div class="kota3">
+        <img src="Ayaka.png" alt="Gambar Karakter" class="karakter" style="margin-left: 290px;">
+        <p style="text-align: center; font-family: Helvetica;">Inazuma</p>
+        <script>
+            $(document).ready(function () {
+                $(".kota3").hover(
+                    function () {
+                        $(this).find(".karakter").css("opacity", "1");
+                    },
+                    function () {
+                        $(this).find(".karakter").css("opacity", "0");
+                    }
+                );
+            });
+        </script>
+    </div>
+    <div class="kota4">
+        <img src="Tighnari.png" alt="Gambar Karakter" class="karakter" style="margin-left: 320px;">
+        <p style="text-align: center; font-family: Helvetica;">Sumeru</p>
+        <script>
+            $(document).ready(function () {
+                $(".kota4").hover(
+                    function () {
+                        $(this).find(".karakter").css("opacity", "1");
+                    },
+                    function () {
+                        $(this).find(".karakter").css("opacity", "0");
+                    }
+                );
+            });
+        </script>
+    </div>
+    <div class="kota5">
+        <p style="text-align: center; font-family: Helvetica;">Coming Soon</p>
+    </div>
+    <footer class="bg-dark text-center text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p style="text-align: center; transform: translateY(70%);">&copy; 2023 Genshin Impact. All rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -29,13 +29,36 @@
         }
 
         .bg-warning {
-            position: absolute;
+            position: fixed;
             top: 10;
             right: 0;
-            padding: 18px;
-            padding-left: 40px;
+            margin: 0px;
+            padding: 15px;
+            padding-right: 60px;
+            padding-left: 60px;
+            font-size: 20px;
         }
 
+        .menu:hover {
+            text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+            color: #fff;
+        }
+
+        .menu::after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #69e0ff;
+            transform: scale(0);
+            transition: transform 0.5s ease-out;
+            pointer-events: none;
+        }
+
+        .menu:hover::after {
+            transform: scale(1);
+        }
 
         body {
             overflow-x: hidden;
@@ -61,6 +84,18 @@
             align-items: center;
             width: 100%;
             z-index: 1;
+        }
+
+        .news {
+            position: absolute;
+            top: 110%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            font-size: 40PX;
         }
 
         .bg-karakter {
@@ -215,20 +250,47 @@
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Beranda</a>
+                    <a class="nav-link menu" href="#Beranda">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Karakter</a>
+                    <a class="nav-link menu" href="#Karakter">Karakter</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Senjata</a>
+                    <a class="nav-link menu" href="#Senjata">Senjata</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Fitur</a>
+                    <a class="nav-link menu" href="#Fitur">Fitur</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak</a>
+                    <a class="nav-link menu" href="#Kontak">Kontak</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link menu" href="#" style="margin-left: 340px;">Log In
+                        <img src="download (2).png" alt="Log In" style="margin-left: 10px; size: 100px;">
+                    </a>
+                </li>
+                <script>
+                    $(document).ready(function () {
+                        $(document).mousemove(function (event) {
+                            $('.menu').each(function () {
+                                var xPos = $(this).offset().left + ($(this).width() / 2);
+                                var yPos = $(this).offset().top + ($(this).height() / 2);
+                                var mouseX = event.pageX;
+                                var mouseY = event.pageY;
+                                var distance = Math.sqrt(((xPos - mouseX) * (xPos - mouseX)) + ((yPos - mouseY) * (yPos - mouseY)));
+                                if (distance < 150) {
+                                    $(this).find('::after').css({
+                                        transform: 'scale(' + (1 - (distance / 150)) + ')'
+                                    });
+                                } else {
+                                    $(this).find('::after').css({
+                                        transform: 'scale(0)'
+                                    });
+                                }
+                            });
+                        });
+                    });
+                </script>
             </ul>
             <div class="bg-warning" onclick="alert('Tombol download ditekan!')" style="cursor: pointer">Download</div>
         </div>
@@ -266,24 +328,21 @@
         </div>
     </div>
     <div class="bg2">
+        <div class="news">NEWS</div>
         <div class="container content">
             <div class="row">
-                <div class="col-sm-4 bg-karakter">
-                    <h2>Karakter</h2>
-                    <p>Temukan karakter-karakter baru di Genshin Impact, dengan kemampuan dan keunikan masing-masing.
-                    </p>
-                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
+                <div class="col-md-6"
+                    style="height: 400px;background-image: url('BGnews1.jpg'); background-position: center; background-repeat: no-repeat;">
+                    <div class="bg-img"></div>
                 </div>
-                <div class="col-sm-4 bg-senjata">
-                    <h2>Senjata</h2>
-                    <p>Dapatkan senjata-senjata terbaik untuk karakter Anda, dengan berbagai jenis dan kekuatan.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
-                </div>
-                <div class="col-sm-4 bg-fitur">
-                    <h2>Fitur</h2>
-                    <p>Dapatkan fitur-fitur menarik dan seru di Genshin Impact, seperti petualangan, pertarungan, dan
-                        banyak lagi.</p>
-                    <p><a href="#" class="btn btn-primary" role="button">Lihat Detail</a></p>
+                <div class="col-md-6"
+                    style="background: rgba(38,18,12,0.62); backdrop-filter: blur(2px); opacity: 70px;">
+                    <h2 class="text-white py-0 px-3" style="font-size: 20px;">Senjata</h2>
+                    <ul class="w-100 text-white list-unstyled">
+                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
+                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
+                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
+                    </ul>
                 </div>
             </div>
         </div>

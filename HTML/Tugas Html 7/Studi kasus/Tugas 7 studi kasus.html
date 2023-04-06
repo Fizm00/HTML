@@ -8,6 +8,7 @@
     <title>Genshin Impact</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -37,6 +38,10 @@
             padding-right: 60px;
             padding-left: 60px;
             font-size: 20px;
+        }
+
+        .menu {
+            text-decoration: none;
         }
 
         .menu:hover {
@@ -71,8 +76,11 @@
             justify-content: flex-end;
             flex-direction: column;
             display: flex;
-            margin-top: -20px;
-            cursor: pointer;
+        }
+
+        img:hover {
+            opacity: 0.8;
+            filter: brightness(1.2);
         }
 
         .bg2 {
@@ -91,35 +99,94 @@
             top: 110%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 24px;
+            font-size: 35px;
             font-weight: bold;
             color: #fff;
             text-align: center;
-            font-size: 40PX;
+            font-weight: 400;
         }
 
-        .bg-karakter {
-            background-color: #d9e4f0;
-            color: #003b6f;
-            font-size: 24px;
-            text-align: center;
-            padding: 30px;
+        .text {
+            position: relative;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        .bg-senjata {
-            background-color: #a5b3cc;
-            color: #003b6f;
-            font-size: 24px;
-            text-align: center;
-            padding: 30px;
+        .text::before,
+        .text::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
         }
 
-        .bg-fitur {
-            background-color: #6d84a3;
+        .text::before {
+            top: 0;
+        }
+
+        .text::after {
+            bottom: 0;
+        }
+
+        .text:hover::before,
+        .text:hover::after {
+            transform: scaleY(1);
+        }
+
+        .text:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .more {
+            position: absolute;
+            right: 33px;
+            bottom: 30px;
+            height: 22px;
+            line-height: 22px;
+            font-size: 18px;
+            color: orange;
+            cursor: pointer;
+            padding-left: 38px;
+            font-family: Tahoma, Helvetica, Arial, sans-serif !important;
+        }
+
+        .more a {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .more:hover a {
+            color: orange;
+        }
+
+        .more:hover img {
+            filter: brightness(1.5) saturate(2);
+        }
+
+        .more img {
+            display: inline-block;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .more-link {
             color: #fff;
-            font-size: 24px;
-            text-align: center;
-            padding: 30px;
         }
 
         @media screen and (max-width: 1920px) {
@@ -136,7 +203,6 @@
                 height: 260px;
                 cursor: pointer;
                 transition: transform 0.4s 0s ease;
-
             }
 
             .kota2 {
@@ -217,6 +283,7 @@
 
         .kota1:hover {
             transform: scale(1.2);
+            opacity: 1;
         }
 
         .kota2:hover {
@@ -328,7 +395,11 @@
         </div>
     </div>
     <div class="bg2">
-        <div class="news">NEWS</div>
+        <div class="news">
+            <img src="download (4).png" alt="logo kiri">
+            NEWS
+            <img src="download (3).png" alt="logo kanan">
+        </div>
         <div class="container content">
             <div class="row">
                 <div class="col-md-6"
@@ -337,12 +408,24 @@
                 </div>
                 <div class="col-md-6"
                     style="background: rgba(38,18,12,0.62); backdrop-filter: blur(2px); opacity: 70px;">
-                    <h2 class="text-white py-0 px-3" style="font-size: 20px;">Senjata</h2>
+                    <h2 class="text-white px-3" style="font-size: 20px; margin-top: 40px;">News</h2>
                     <ul class="w-100 text-white list-unstyled">
-                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
-                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
-                        <li class="py-2 px-3">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptatem!</li>
+                        <div class="text py-2.7 px-3 clickable">The Version 3.6 "A Parade of Providence" Preview page is
+                            here!
+                        </div>
+                        <div class="text py-2.7 px-3 clickable">Version 3.6 "A Parade of Providence" Trailer | Genshin
+                            Impact
+                        </div>
+                        <div class="text py-2.7 px-3 clickable">Version 3.6 Special Program Preview</div>
+                        <div class="text py-2.7 px-3 clickable">Fungus Mechanicus" Gameplay Tips</div>
+                        <div class="text py-2.7 px-3 clickable"
+                            style="border-bottom: 1px solid rgba(255, 255, 255, 0.2)">
+                            Collected Miscellany - "Mika: Constellatory Companion" | Genshin Impact</div>
                     </ul>
+                    <div class="more">
+                        <img src="download (7).png" alt="logo">
+                        <a href="#">More</a>
+                    </div>
                 </div>
             </div>
         </div>

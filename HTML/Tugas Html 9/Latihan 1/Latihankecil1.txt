@@ -1,0 +1,16 @@
+Soal :
+Bagaimana jika metode GET ditangani dengan superglobal $_POST; dan sebaliknya, 
+metode POST ditangani dengan $_GET? Jelaskan!
+
+Jawaban :
+Perlu kita ketahui bahwa metode get & post adalah dua cara yang berbeda untuk mengirimkan data. Kalau metode get itu mengirimkan data 
+sebagai parameter di URL sedangkan metode post mengirimkan data sebagai bagian dari body request HTTP. Jika kita mengubah cara penanganan 
+variabel superglobal yang mana variabel $_POST menangani metode GET dan sebaliknya maka akan terjadi masalah. 
+
+untuk penjelasannya :
+kalau kita menangani metode GET menggunakan variabel $_POST, maka data yang dikirimkan melalui URL tidak dapat terbaca oleh server. 
+Hal ini dikarenakan variabel $_POST hanya akan menangani data yang dikirimkan melalui body request HTTP, sedangkan data yang dikirimkan 
+melalui URKL tidak akan terbaca. Sebaliknya, kalau kita menangani metode POST menggunakan variabel $_GET, maka data yang dikirimkan melalui 
+body request HTTP akan terbaca oleh server, tetapi akan muncul masalah keamanan. ini dikarenakan jika data dari form login misalnya yang 
+seharusnya tidak dapat dilihat oleh orang lain maka data tersebut bisa dilihat karena menggunakan $_GET dan data tersebut akan terbaca oleh 
+pengguna lain di URL.

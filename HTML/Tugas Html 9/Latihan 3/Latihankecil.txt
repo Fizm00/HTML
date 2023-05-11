@@ -1,0 +1,35 @@
+Soal : 
+Bagaimana memberikan nilai default pada koleksi radio button?
+
+Jawaban :
+untuk memberikan nilai default pada koleksi radio button, kita dapat menambahkan atribut checked pada salah satu input 
+radio button. jika berdasarkan kode latihan 3, maka kodenya akan menjadi berikut ini:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>>Data Radio Button</title>
+</head>
+
+<body>
+    <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
+        Jenis Kelamin
+        <input type="radio" name="sex" value="Pria" checked />Pria
+        <input type="radio" name="sex" value="Wanita" />Wanita <br />
+        <input type="submit" value="ok" />
+    </form>
+    <?php
+    if (isset($_POST['sex'])) {
+        echo $_POST['sex'];
+    }
+    ?>
+</body>
+
+</html>
+
+pada kode diatas  atribut checked ditambahkan pada input radio button "Pria", sehingga ketika halaman pertama kali dimuat, 
+nilai default yang terpilih adalah "Pria".

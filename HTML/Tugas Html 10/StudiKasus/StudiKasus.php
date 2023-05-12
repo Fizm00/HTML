@@ -1,3 +1,35 @@
+<?php
+session_start(); // memulai session
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $id = $_POST['id'];
+    $password = $_POST['password'];
+
+    // cek apakah id dan password valid
+    if (!is_string($id) || !is_string($password)) {
+        echo "terjadi kesalahan pada server!";
+    } elseif ($id == "admin" && $password == "1234") {
+        // jika login berhasil, set session dan redirect ke homepage
+        $_SESSION['id'] = $id;
+        header('Location: homepage.php');
+        exit();
+    } else {
+        echo "Login gagal!";
+    }
+
+    if (!is_string($id) || !is_string($password)) {
+        echo "terjadi kesalahan pada server!";
+    } elseif ($id == "Firza" && $password == "Himawan") {
+        // jika login berhasil, set session dan redirect ke homepage
+        $_SESSION['id'] = $id;
+        header('Location: homepage.php');
+        exit();
+    } else {
+        echo "Login gagal!";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,17 +86,17 @@
         }
     </style>
     <script>
-        function validate() {
+        function validateForm() {
             var id = document.forms[0]["id"].value;
-            var password = document.forms[0]["password`"].value;
+            var password = document.forms[0]["password"].value;
             if (id == "" || password == "") {
                 alert("Username dan password harus diisi");
-                document.format[0]["id"].focus();
+                document.forms[0]["id"].focus();
                 return false;
             }
             if (!/^[a-zA-Z]+$/.test(id) || !/^[a-zA-Z]+$/.test(password)) {
                 alert("Username dan password harus huruf");
-                document.format[0]["id"].focus();
+                document.forms[0]["id"].focus();
                 return false;
             }
         } 
@@ -74,20 +106,18 @@
     <div class="center">
         <h1>Login</h1>
         <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $id = $_POST['id'];
-            $password = $_POST['password'];
-            if (!is_string($id) || !is_string($password)) {
-                echo "terjadi kesalahan pada server!";
-            } elseif ($id == "admin" && $password == "1234") {
-                echo "Login berhasil!";
-            } else {
-                echo "Login gagal!";
-            }
+           if (isset($_SESSION['success'])) { // jika login berhasil
+            header("Location: homepage.php"); // redirect ke halaman homepage
+            exit(); // hentikan eksekusi script
+        }
+    
+        if (isset($_SESSION['error'])) { // jika login gagal
+            echo "<p style='color: red'>" . $_SESSION['error'] . "</p>";
+            unset($_SESSION['error']); // hapus pesan error dari session
         }
         ?>
-
-        <form method="post" onsubmit="return validateForm()">
+    
+        <form method="post" onsubmit="return validate()"> <!-- panggil fungsi validate() -->
             <label for="id">Username:</label>
             <input type="text" id="id" name="id" required>
             <label for="password">Password:</label>

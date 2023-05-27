@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="homepage.css">
 </head>
-
 <body>
 <header>
     <nav>
@@ -21,7 +20,7 @@
                 </div>
                 <div>
                 <div class="text-start" style="position: relative; top: -43px; float: right; margin-right: -5%;">
-                        <a href="logout.php" class="btn btn-outline-light">Logout</a>
+                    <a href="logout.php" class="btn btn-outline-light" onclick="return confirm('Apakah Anda yakin ingin logout?')">Logout</a>
                     </div>
                 </div>
             </div>

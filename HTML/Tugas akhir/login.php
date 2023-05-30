@@ -30,10 +30,12 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <link rel="stylesheet" href="login.css">
-  <title>Tugas Akhir</title>
+    <link rel="stylesheet" href="login.css">
+    <title>Tugas Akhir</title>
 </head>
+
 <body>
     <section>
         <div class="form-box">
@@ -63,4 +65,5 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
+
 </html>

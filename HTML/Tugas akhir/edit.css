@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('Backgroundedit.jpg') no-repeat;
+    background: url('backgroundedit.jpg') no-repeat;
     background-position: center;
     background-size: cover;
 }

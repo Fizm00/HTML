@@ -27,7 +27,6 @@
             </div>
         </nav>
     </header>
-    <h5 class="mt-4" style="margin-left: 305px; color: azure;">Menampilkan data buku</h5>
     <div class="datatablecontainer container mt-4">
         <table id="myTable" class="display table table-bordered">
             <thead>
@@ -38,7 +37,7 @@
                     <th>PENULIS BUKU</th>
                     <th>PENERBIT BUKU</th>
                     <th>TAHUN TERBIT</th>
-                    <th>STOK</th>
+                    <th>JUMLAH HALAMAN</th>
                     <th>MENU</th>
                 </tr>
             </thead>
@@ -48,7 +47,7 @@
                 $no = 1;
                 $data = mysqli_query($koneksi, "SELECT * FROM buku");
                 while ($d = mysqli_fetch_array($data)) {
-                    ?>
+                ?>
                     <tr>
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $d['isbn_buku']; ?></td>
@@ -56,11 +55,13 @@
                         <td><?php echo $d['penulis_buku']; ?></td>
                         <td><?php echo $d['penerbit_buku']; ?></td>
                         <td><?php echo $d['tahun_terbit']; ?></td>
-                        <td><?php echo $d['stok']; ?></td>
+                        <td><?php echo $d['jumlah_halaman']; ?></td>
                         <td>
                             <div class="btn-group">
-                                <a href="edit.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="hapus.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                <div class="btn-group">
+                                    <a href="edit.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-primary btn-sm mr-2">Edit</a>
+                                    <a href="hapus.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-danger btn-sm mr-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -81,4 +82,3 @@
 </body>
 
 </html>
-

@@ -7,14 +7,14 @@ if (isset($_POST['submit'])) {
     $penulis = $_POST['penulis'];
     $penerbit = $_POST['penerbit'];
     $tahun_terbit = $_POST['tahun_terbit'];
-    $stok = $_POST['stok'];
+    $jumlah_halaman = $_POST['jumlah_halaman'];
 
     // Koneksi ke database
     $koneksi = mysqli_connect("localhost", "root", "", "db_buku") or die("Koneksi gagal");
 
     // Query tambah buku
-    $query = "INSERT INTO buku (isbn_buku, judul_buku, penulis_buku, penerbit_buku, tahun_terbit, stok)
-              VALUES ('$isbn', '$judul', '$penulis', '$penerbit', '$tahun_terbit', '$stok')";
+    $query = "INSERT INTO buku (isbn_buku, judul_buku, penulis_buku, penerbit_buku, tahun_terbit, jumlah_halaman)
+              VALUES ('$isbn', '$judul', '$penulis', '$penerbit', '$tahun_terbit', '$jumlah_halaman')";
 
     // Eksekusi query
     $result = mysqli_query($koneksi, $query);
@@ -75,8 +75,8 @@ if (isset($_POST['submit'])) {
             </div>
             <div class="inputbox">
                 <ion-icon name="archive-outline"></ion-icon>
-                <input type="text" name="stok" required>
-                <label for="stok">STOK</label>
+                <input type="text" name="jumlah_halaman" required>
+                <label for="stok">JUMLAH HALAMAN</label>
             </div>
             <button type="submit" name="submit">SIMPAN</button>
         </form>

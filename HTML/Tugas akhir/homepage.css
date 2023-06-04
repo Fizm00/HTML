@@ -1,14 +1,16 @@
 body {
-    background: url('Backgroundhomepage.jpg') no-repeat;
+    background: url('backgroundhomepage.jpg') no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 .Title {
     text-align: center;
     font-size: 40px;
     margin-right: -700px;
 }
+
 a.logout {
     color: #337ab7;
     text-decoration: none;
@@ -16,9 +18,11 @@ a.logout {
     display: block;
     text-align: center;
 }
+
 a.logout:hover {
     text-decoration: underline;
 }
+
 .datatablecontainer {
     width: 100%;
     margin: 0 auto;
@@ -26,15 +30,44 @@ a.logout:hover {
     padding: 20px;
     border-radius: 20px;
 }
+
 div.dataTables_wrapper div.dataTables_info,
 div.dataTables_wrapper div.dataTables_paginate {
     margin-top: 0.5em;
     font-size: 0.8em;
 }
+
 div.dataTables_wrapper div.dataTables_length,
 div.dataTables_wrapper div.dataTables_filter {
     margin-bottom: 0.5em;
 }
+
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {
     margin: 0.5em 0;
+}
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-color: black;
+    border-radius: 0;
+}
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: black;
+}
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border-color: black;
+    border-radius: 0;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: black;
+}
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }

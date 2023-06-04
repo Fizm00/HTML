@@ -48,8 +48,8 @@
                         <td><input type="text" name="tahun_terbit" value="<?php echo $d["tahun_terbit"] ?>"></td>
                     </tr>
                     <tr>
-                        <td>STOK</td>
-                        <td><input type="text" name="stok" value="<?php echo $d["stok"] ?>"></td>
+                        <td>JUMLAH HALAMAN</td>
+                        <td><input type="text" name="jumlah_halaman" value="<?php echo $d["jumlah_halaman"] ?>"></td>
                     </tr>
                     <tr>
                         <td></td>

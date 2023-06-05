@@ -17,9 +17,9 @@
 
         <?php
         include "koneksi.php";
-        $isbn = $_GET['isbn'];
-        $data = mysqli_query($koneksi, "SELECT * FROM buku WHERE isbn_buku='$isbn'") or die(mysqli_error($koneksi));
-        $no = 1;
+        $isbn = $_GET['isbn']; // Mengambil data isbn dari URL yang dikirim oleh homepage.php
+        $data = mysqli_query($koneksi, "SELECT * FROM buku WHERE isbn_buku='$isbn'") or die(mysqli_error($koneksi)); // Menjalankan query untuk memilih data buku berdasarkan isbn
+        $no = 1; // Membuat variabel $no untuk membuat nomor urut
         while ($d = mysqli_fetch_array($data)) {
         ?>
             <form action="update.php" method="post">
@@ -27,6 +27,7 @@
                     <tr>
                         <td>ISBN</td>
                         <td>
+                            // Menampilkan data isbn dari database ke dalam inputan form
                             <input type="hidden" name="isbn" value="<?php echo $d["isbn_buku"] ?>">
                             <input type="text" name="isbn_baru" value="<?php echo $d["isbn_buku"] ?>">
                         </td>

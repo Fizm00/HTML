@@ -1,9 +1,10 @@
 <?php
-session_start();
+session_start(); // Memulai session
 
+// Memeriksa apakah pengguna sudah login atau belum
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['username']; // Mengambil nilai username dari form login
+    $password = $_POST['password']; // Mengambil nilai password dari form login
 
     // Koneksi ke database
     $koneksi = mysqli_connect("localhost", "root", "", "db_buku");

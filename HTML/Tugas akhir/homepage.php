@@ -43,12 +43,15 @@
             </thead>
             <tbody>
                 <?php
+                // Memanggil skrip koneksi dari file koneksi.php
                 include 'koneksi.php';
-                $no = 1;
+                $no = 1; // Membuat variabel $no untuk membuat nomor urut
+                // Menjalankan query SELECT untuk menampilkan data dari tabel buku
                 $data = mysqli_query($koneksi, "SELECT * FROM buku");
                 while ($d = mysqli_fetch_array($data)) {
                 ?>
                     <tr>
+                        // Menampilkan data dari tabel buku ke dalam tabel di halaman homepage.php
                         <td><?php echo $no++; ?></td>
                         <td><?php echo $d['isbn_buku']; ?></td>
                         <td><?php echo $d['judul_buku']; ?></td>
@@ -59,6 +62,7 @@
                         <td>
                             <div class="btn-group">
                                 <div class="btn-group">
+                                    // Membuat tombol edit dan hapus untuk setiap data buku
                                     <a href="edit.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-primary btn-sm mr-2">Edit</a>
                                     <a href="hapus.php?isbn=<?php echo $d["isbn_buku"]; ?>" class="btn btn-danger btn-sm mr-2" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
                                 </div>
@@ -71,10 +75,10 @@
             </tbody>
         </table>
     </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> // Mengimpor jQuery dari CDN
+    <script src="//cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script> // Mengimpor plugin DataTables dari CDN
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script> // Mengimpor Bootstrap dari CDN
+    <script> // Membuat fungsi untuk mengaktifkan plugin DataTables
         $(document).ready(function() {
             $('#myTable').DataTable();
         });

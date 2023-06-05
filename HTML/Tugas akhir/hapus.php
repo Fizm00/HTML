@@ -1,10 +1,11 @@
 <?php
-include 'koneksi.php';
 
-if (isset($_GET['isbn'])) {
-    $isbn = $_GET['isbn'];
+include 'koneksi.php'; // Mengimpor skrip koneksi dari file koneksi.php
 
-    $query = "DELETE FROM buku WHERE isbn_buku = '$isbn'";
+if (isset($_GET['isbn'])) { // Memeriksa apakah variabel GET 'isbn' terdefinisi, jika ya, jalankan blok kode di bawahnya
+    $isbn = $_GET['isbn']; 
+
+    $query = "DELETE FROM buku WHERE isbn_buku = '$isbn'"; // Menjalankan query DELETE untuk menghapus data di tabel buku
     $result = mysqli_query($koneksi, $query);
 
     if ($result) {
